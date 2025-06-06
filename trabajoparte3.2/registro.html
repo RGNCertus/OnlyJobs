@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro.html</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-image: url('https://images.unsplash.com/photo-1608501078713-8e445a709b39?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWRpZmljaW8lMjBkZSUyMGxhJTIwY2l1ZGFkJTIwNGslMjBmb25kbyUyMGRlJTIwcGFudGFsbGF8ZW58MHx8MHx8fDA%3D');
+      background-size: cover;
+      background-position: center;
+      padding-top: 100px; /* espacio para header fijo */
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background-color: rgba(0, 85, 170, 0.9);
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    .title {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .form-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 100px);
+    }
+
+    .form-container {
+      backdrop-filter: blur(12px);
+      background-color: rgba(255, 255, 255, 0.25);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      width: 350px;
+      color: #ffffff;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #ffffff;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.85);
+      color: #333;
+    }
+
+    input[type="submit"] {
+      background: linear-gradient(135deg, #0077cc, #005fa3);
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="WhatsApp Image 2025-06-04 at 9.39.06 AM.jpeg"  class="logo">
+    <span class="title">ONLYJOBS</span>
+  </header>
+
+  <div class="form-wrapper">
+    <div class="form-container">
+      <h2>REGISTRARSE</h2>
+      <form>
+        <div>
+          <label for="nombre">Nombres:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div>
+          <label for="apellido">Apellidos:</label>
+          <input type="text" id="apellido" name="apellido" required>
+        </div>
+
+        <div>
+          <label for="edad">Edad:</label>
+          <input type="number" id="edad" name="edad" required>
+        </div>
+
+        <div>
+          <label for="correo">Correo:</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+
+        <div>
+          <label for="celular">Número de celular:</label>
+          <input type="text" id="celular" name="celular" required>
+        </div>
+
+        <input type="submit" value="Enviar">
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
