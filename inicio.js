@@ -35,7 +35,7 @@ document.querySelectorAll("nav a").forEach((enlace) => {
       window.location.href = "Redes Sociales/RedesSociales.html";
     } else if (texto.includes("contáctanos")) {
       window.location.href = "Contactanos/Contacto.html";
-      else if (texto.includes("Regístrate")) {
+    }  else if (texto.includes("Regístrate")) {
       window.location.href = "Registrarse/registro.html";
     }
   });
