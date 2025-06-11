@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feed de Trabajos</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f4f9ff;
+      display: flex;
+    }
+
+    header {
+      background-color: #0074d9;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #eaf3ff;
+      padding: 20px;
+      border-right: 3px solid #0074d9;
+      min-height: 100vh;
+      position: fixed;
+      top: 80px;
+      left: 0;
+    }
+
+    .perfil-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 3px solid #0074d9;
+    }
+
+    .user-info {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .user-info h3 {
+      margin: 10px 0 5px;
+      color: #004a99;
+    }
+
+    .estrellas {
+      color: gold;
+      font-size: 20px;
+    }
+
+    .etiqueta {
+      background-color: #0074d9;
+      color: white;
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 5px;
+      margin-top: 5px;
+      font-size: 12px;
+    }
+
+    .contenido {
+      margin-left: 270px;
+      padding-top: 100px;
+      width: 100%;
+    }
+
+    .filtros {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: #e9f0fb;
+      flex-wrap: wrap;
+    }
+
+    .filtros select {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .contenedor-feed {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .trabajo {
+      background-color: white;
+      border: 2px solid #0074d9;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .trabajo h3 {
+      margin: 0;
+      color: #004a99;
+    }
+
+    .trabajo p {
+      margin: 5px 0;
+    }
+
+    .publicar-btn {
+      display: block;
+      margin: 0 auto 30px;
+      background-color: #0074d9;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .publicar-btn:hover {
+      background-color: #005fa3;
+    }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-contenido {
+      background-color: white;
+      margin: 100px auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    .modal-contenido h2 {
+      margin-top: 0;
+    }
+
+    .modal-contenido input, .modal-contenido select, .modal-contenido textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .cerrar {
+      float: right;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .cerrar:hover {
+      color: red;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+
+      .contenido {
+        margin-left: 0;
+        padding-top: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PANEL LATERAL IZQUIERDO -->
+  <div class="sidebar">
+    <a href="paginasec.html">
+  <img src="tony.jpg" alt="Foto de usuario" class="perfil-img" />
+</a>
+    <div class="user-info">
+      <h3>Tony S.</h3>
+      <h3>Publico sus servicios recientemente</h3>
+      <div class="estrellas">★★★★☆</div>
+      <div class="etiqueta">Recomendado</div>
+    </div>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="contenido">
+
+    <header>
+      <h1>Feed General de Trabajos Publicados</h1>
+    </header>
+
+    <section class="filtros">
+      <select>
+        <option>Categoría</option>
+        <option>Diseño Web</option>
+        <option>Videojuegos</option>
+        <option>Software</option>
+        <option>Mantenimiento</option>
+      </select>
+
+      <select>
+        <option>Precio</option>
+        <option>Menor a mayor</option>
+        <option>Mayor a menor</option>
+      </select>
+
+      <select>
+        <option>Popularidad</option>
+        <option>Más valorados</option>
+        <option>Más vendidos</option>
+      </select>
+    </section>
+
+    <button class="publicar-btn" onclick="document.getElementById('modal').style.display='block'">
+      Publicar nuevo trabajo
+    </button>
+
+    <section class="contenedor-feed">
+
+      <div class="trabajo">
+        <h3>Creación de Página Web Profesional</h3>
+        <p><strong>Categoría:</strong> Diseño Web</p>
+        <p><strong>Precio:</strong> S/. 450.00</p>
+        <p>Diseño moderno, adaptable y con panel de administración.</p>
+      </div>
+
+      <div class="trabajo">
+        <h3>Videojuego 2D estilo plataforma</h3>
+        <p><strong>Categoría:</strong> Videojuegos</p>
+        <p><strong>Precio:</strong> S/. 800.00</p>
+        <p>Incluye niveles, animaciones y sonido.</p>
+      </div>
+
+      <div class="trabajo">
+        <h3>Mantenimiento completo de PC</h3>
+        <p><strong>Categoría:</strong> Mantenimiento</p>
+        <p><strong>Precio:</strong> S/. 100.00</p>
+        <p>Limpieza interna, optimización de software y hardware.</p>
+      </div>
+
+      <div class="trabajo">
+        <h3>Tecnico de computadoras</h3>
+        <p><strong>Categoría:</strong> Mantenimiento</p>
+        <p><strong>Precio:</strong> S/. 210.00</p>
+        <p>Limpieza interna, optimización de software y hardware.</p>
+      </div>
+
+      <div class="trabajo">
+        <h3>Diseñador frontend para paginas web</h3>
+        <p><strong>Categoría:</strong> Diseño web</p>
+        <p><strong>Precio:</strong> S/. 750.00</p>
+        <p>Incluye disponibilidad para implementar nuevas interfaces, optimizacion, animaciones y mantenimientos.</p>
+      </div>
+
+      <div class="trabajo">
+        <h3>Programador Junior</h3>
+        <p><strong>Categoría:</strong> Software</p>
+        <p><strong>Precio:</strong> S/. 1500.00</p>
+        <p>Dominante en lenguaje de desarrollo, Solucionador de problemas, conocimiento de Javascript, phyton, Java, C++.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- MODAL DE PUBLICACIÓN -->
+  <div id="modal" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+      <h2>Publicar nuevo trabajo</h2>
+      <form>
+        <input type="text" placeholder="Título del trabajo" required>
+        <select required>
+          <option value="">Selecciona una categoría</option>
+          <option>Diseño Web</option>
+          <option>Videojuegos</option>
+          <option>Software</option>
+          <option>Mantenimiento</option>
+        </select>
+        <input type="number" placeholder="Precio (S/.)" required>
+        <textarea placeholder="Descripción del trabajo..." rows="4" required></textarea>
+        <button type="submit" class="publicar-btn">Publicar</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal');
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
