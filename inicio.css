@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f5f7fb;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #22467b;
+  padding: 10px 30px;
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 60px;
+}
+
+.carousel-section {
+  flex: 1.2;
+  position: relative;
+  padding-right: 30px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.8);
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.slogan {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #22467b;
+  text-align: center;
+}
+
+.login-section {
+  flex: 0.9;
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-logo {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+#login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#login-form h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#login-form input {
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#login-form button {
+  padding: 12px;
+  background-color: #22467b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#login-form button:hover {
+  background-color: #18365e;
+}
+
+.google-btn {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-btn::before {
+  content: "";
+  background: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg') no-repeat center;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.divider {
+  text-align: center;
+  margin: 10px 0;
+  color: #888;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 10px;
+  color: #22467b;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+.terms {
+  font-size: 12px;
+  color: #999;
+  margin-top: 15px;
+}
