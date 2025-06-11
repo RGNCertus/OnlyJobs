@@ -30,11 +30,11 @@ document.querySelectorAll("nav a").forEach((enlace) => {
     const texto = enlace.textContent.toLowerCase();
 
     if (texto.includes("nosotros")) {
-      window.location.href = "nosotros.html";
+      window.location.href = "Sobre Nosotros/nosotros.html";
     } else if (texto.includes("redes")) {
-      window.location.href = "redes.html";
+      window.location.href = "Redes Sociales/redes.html";
     } else if (texto.includes("contáctanos")) {
-      window.location.href = "contacto.html";
+      window.location.href = "Contactanos/contacto.html";
     }
   });
 });
