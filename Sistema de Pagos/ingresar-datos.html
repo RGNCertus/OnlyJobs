@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ingresar datos de tarjeta</title>
+  <link rel="stylesheet" href="/Sistema de Pagos/css/estilosingresardatos.css" />
+</head>
+<body>
+
+
+  <header>
+    <div class="logo-container">
+      <img src="/logo.png" alt="Logo" class="logo" />
+      <h1>OnlyJobs</h1>
+    </div>
+    <nav>
+      <a href="#">lo con lo deba ir </a>
+      <a href="#"></a>
+      <a href="#"></a>
+    </nav>
+  </header>
+
+
+  <section class="formulario-tarjeta">
+    <h2>Datos de tu Tarjeta <span id="metodo-seleccionado"></span></h2>
+
+     <form action="confirmacion.html" method="GET">
+
+        <label for="nombre">Nombre del titular</label>
+        <input type="text" id="nombre" placeholder="Ej: Brandon Ruiz" required>
+
+        <label for="numero">Número de tarjeta</label>
+        <input type="text" id="numero" maxlength="16" placeholder="XXXX XXXX XXXX XXXX" required>
+
+        <div class="grupo">
+            <div style="flex: 1;">
+                <label for="fecha">Fecha de vencimiento</label>
+                <input type="month" id="fecha" name="fecha" required />
+            <div style="flex: 1;">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" maxlength="4" placeholder="123" required>
+            </div> 
+          </div> 
+
+          <button type="submit">Confirmar Pago</button>
+    </form>
+</section>
+
+  <script src="/Sistema de Pagos/java/pagosingresardatos.js"></script>
+</body>
+</html>
