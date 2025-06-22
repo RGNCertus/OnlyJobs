@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página estilo LinkedIn</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f3f6f9;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #004182;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .acciones {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .acciones input {
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+
+    .acciones button {
+      background-color: white;
+      color: #004182;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .acciones button:hover {
+      background-color: #cce0ff;
+    }
+
+    .btn-inicio {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #004182;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    /* Carrusel */
+    .carrusel {
+      margin: 40px auto;
+      max-width: 900px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: deslizar 12s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes deslizar {
+      0% {transform: translateX(0);}
+      33% {transform: translateX(-100%);}
+      66% {transform: translateX(-200%);}
+      100% {transform: translateX(0);}
+    }
+
+    footer {
+      background-color: #004182;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body id="inicio">
+
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="logo">Onlyjobs</div>
+    <div class="acciones">
+      <input type="text" placeholder="Buscar...">
+      <button onclick="window.location.href='main.html'">Trabajos publicados</button>
+    </div>
+  </header>
+
+  <!-- CARRUSEL -->
+  <section class="carrusel">
+    <div class="slides">
+      <img src="1.png" alt="Imagen 1" />
+      <img src="2.png" alt="Imagen 2" />
+      <img src="3.png" alt="Imagen 3" />
+    </div>
+  </section>
+
+  <!-- BOTÓN PARA VOLVER AL INICIO -->
+  <a href="#inicio">
+    <button class="btn-inicio">Inicio ↑</button>
+  </a>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    Somos tu mejor opción para el mañana.
+  </footer>
+
+</body>
+</html>
