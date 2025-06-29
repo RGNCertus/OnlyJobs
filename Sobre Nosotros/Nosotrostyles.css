@@ -27,7 +27,7 @@ body {
   margin-bottom: 80px;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 50px 100px;
+  padding: 100px 100px;
 }
 
 .bloque-mision {
@@ -81,3 +81,29 @@ hr {
   border-color: #0056b3;
 }
 
+.titulo {
+  background-color: #0056b3;
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 0;
+  width: 100%;
+  padding: 10px ;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.titulo h2 {
+  margin: 20px;
+}
+
+.logo-fixed {
+  position: absolute;
+  height: 100px;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  z-index: 2;
+  cursor: pointer;
+}
