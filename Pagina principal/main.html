@@ -248,7 +248,7 @@
     <h1 style="margin: 0;">Feed General de Trabajos Publicados</h1>
     <div class="botones-header">
       <a href="/Chat/Chat.html" class="header-btn">Chat</a>
-      <a href="cartera.html" class="header-btn">Cartera</a>
+      <a href="#" class="header-btn" onclick="abrirModal()">Cartera</a>
       <a href="pendientes.html" class="header-btn">Pendientes</a>
     </div>
   </div>
@@ -314,5 +314,64 @@
 </section>
 
   </div>
+<!-- B -->
+<div id="modalCartera" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    
+    <div id="formulario-seguridad">
+      <h2>Verificación de Seguridad</h2>
+      <input type="text" id="nombre" placeholder="Nombre completo" required>
+      <input type="text" id="dni" placeholder="DNI (8 dígitos)" maxlength="8" pattern="\d{8}" required>
+      <input type="text" id="tarjeta" placeholder="Número de tarjeta (16 dígitos)" maxlength="16" pattern="\d{16}" required>
+      <input type="text" id="cvv" placeholder="CVV (3 dígitos)" maxlength="3" pattern="\d{3}" required>
+      <input type="month" id="fecha" required>
+      <button onclick="validarSeguridad()">Validar</button>
+    </div>
+
+    <div id="cartera-virtual" style="display:none;">
+      <h2>Mi Cartera Virtual</h2>
+      <p>Saldo actual: S/ <span id="saldo">100.00</span></p>
+
+      <h3>Enviar Dinero</h3>
+      <form onsubmit="enviarDinero(event)">
+        <input type="text" id="destinatario" placeholder="Destinatario" required>
+        <input type="number" id="monto-enviar" placeholder="Monto" required>
+        <button type="submit">Enviar</button>
+      </form>
+
+      <h3>Recibir Dinero</h3>
+      <form onsubmit="recibirDinero(event)">
+        <input type="number" id="monto-recibir" placeholder="Monto" required>
+        <button type="submit">Recibir</button>
+      </form>
+
+      <h3>Historial</h3>
+      <ul id="historial"></ul>
+    </div>
+  </div>
+</div>
+
+<style>
+  #modalCartera input, #modalCartera button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  #modalCartera button {
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  #modalCartera button:hover {
+    background-color: #005fa3;
+  }
+</style>
+
+<script src="/Billetera/javabilletera.js"></script>
+
 </body>
 </html>
