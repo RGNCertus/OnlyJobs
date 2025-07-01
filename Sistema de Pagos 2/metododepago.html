@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyJobs - Método de Pago</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header-mobile">
+            <a class="nav-link" href="/OnlyJobs/Sistema de Pagos/index.html">
+                <i class="bi bi-arrow-left"></i>
+                <h1 class="logo">OnlyJobs</h1>
+            </a>
+            <div class="carrito-mobile">
+                <i class="bi bi-cart-fill"></i>
+                <span class="numerito" id="numerito-mobile">0</span>
+            </div>
+        </header>
+        
+        <aside id="aside-menu">
+            <header class="aside-header">
+                <a class="nav-link" href="/OnlyJobs/Sistema de Pagos/index.html">
+                    <h1 class="logo">OnlyJobs</h1>
+                </a>
+            </header>
+            
+            <div class="user-greeting">
+                <h2 class="bienvenido">Bienvenido</h2>
+                <p class="user-email">alumnocertus@example.com</p>
+            </div>
+            
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a class="boton-menu boton-volver" href="/OnlyJobs/Sistema de Pagos/index.html">
+                            <i class="bi bi-arrow-return-left"></i> Seguir comprando
+                        </a>
+                    </li>
+                    <li>
+                        <a class="boton-menu" href="/OnlyJobs/Sistema de Pagos/index.html">
+                            <i class="bi bi-cart-fill"></i> Carrito <span class="numerito" id="numerito">0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="boton-menu boton-carrito active" href="/OnlyJobs/Sistema de Pagos/metododepago.html">
+                            <i class="bi bi-credit-card"></i> Métodos de pago
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <footer class="aside-footer">
+                <a href="../index.html" class="boton-menu boton-logout">
+                    <i class="bi bi-box-arrow-left"></i> Cerrar sesión
+                </a>
+                <p class="texto-footer">© 2025 OnlyJobs</p>
+            </footer>
+        </aside>
+        
+        <main class="metodo-pago-container">
+            <div class="pasos-compra">
+                <div class="paso">
+                    <span>1</span>
+                    <p>Carrito</p>
+                </div>
+                <div class="paso activo">
+                    <span>2</span>
+                    <p>Pago</p>
+                </div>
+                <div class="paso">
+                    <span>3</span>
+                    <p>Confirmación</p>
+                </div>
+            </div>
+            
+            <h2 class="titulo-principal">
+                <i class="bi bi-credit-card"></i> Selecciona tu método de pago
+            </h2>
+            
+            <div class="metodos-pago">
+                <div class="metodo-option" data-metodo="visa" onclick="seleccionarMetodo('visa')">
+                    <div class="metodo-icono">
+                        <img src="./img/Visa_Logo.png" alt="Visa">
+                    </div>
+                    <div class="metodo-info">
+                        <h3>Visa</h3>
+                        <p>Pago con tarjeta Visa</p>
+                    </div>
+                    <i class="bi bi-check-circle-fill metodo-check"></i>
+                </div>
+                
+                <div class="metodo-option" data-metodo="mastercard" onclick="seleccionarMetodo('mastercard')">
+                    <div class="metodo-icono">
+                        <img src="./img/Mastercard-logo.png" alt="MasterCard">
+                    </div>
+                    <div class="metodo-info">
+                        <h3>MasterCard</h3>
+                        <p>Pago con tarjeta MasterCard</p>
+                    </div>
+                    <i class="bi bi-check-circle-fill metodo-check"></i>
+                </div>
+                
+                <div class="metodo-option" data-metodo="paypal" onclick="seleccionarMetodo('paypal')">
+                    <div class="metodo-icono">
+                        <img src="./img/PayPal.png" alt="PayPal">
+                    </div>
+                    <div class="metodo-info">
+                        <h3>PayPal</h3>
+                        <p>Pago con cuenta PayPal</p>
+                    </div>
+                    <i class="bi bi-check-circle-fill metodo-check"></i>
+                </div>
+            </div>
+            
+            <div class="metodo-acciones">
+                <button class="boton-secundario" onclick="window.location.href='/OnlyJobs/Sistema de Pagos/index.html'">
+                    <i class="bi bi-arrow-left"></i> Volver al carrito
+                </button>
+                <button class="boton-primario" onclick="window.location.href='/OnlyJobs/Sistema de Pagos/ingresar-datos.html'" >
+                    Confirmar método <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="./js/menu.js"></script>
+    <script src="./js/metodo-pago.js"></script>
+</body>
+</html>
