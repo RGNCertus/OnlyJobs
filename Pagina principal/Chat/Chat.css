@@ -1,0 +1,219 @@
+/* ----------- GENERAL ----------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------- NAVBAR ----------- */
+
+.bar-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bar-search span {
+    color: #fff;
+}
+
+.bar {
+    width: 20rem;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #12bf;
+    margin: 0.8em;
+}
+
+img {
+    height: 4rem;
+    width: 4rem;
+    margin: 0;
+    padding: 0;
+}
+
+button, a {
+    text-decoration: none;
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.navbar {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+    background-color: #12BF;
+    color: #f9f9f9;
+    font-family: Arial;
+}
+
+.navbar-overlay {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+body.open .navbar-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar-burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+}
+
+.navbar-title {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.navbar-menu {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    translate: -100% 0;
+    width: 270px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    background: #12bf;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+body.open .navbar-menu {
+    translate: 0 0;
+    visibility: visible;
+}
+
+.navbar-menu > button {
+    color: rgba(255, 255, 255, 0.5);
+    background: transparent;
+    padding: 0 8px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.navbar-menu > button.active {
+    color: inherit;
+}
+
+.navbar-menu > button.active:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.active {
+    border-right: 1px solid #e8e8e8;
+}
+
+@media only screen and (min-width: 600px){
+    .navbar{
+        justify-content: space-between;
+        padding: 0 0 0 16px;
+    }
+
+    .navbar-overlay {
+        display: none;
+    }
+
+    .navbar-burger {
+        display: none;
+    }
+
+    .navbar-menu {
+        position: static;
+        translate: 0 0;
+        width: auto;
+        background: transparent;
+        flex-direction: row;
+        visibility: visible;
+    }
+}
+
+.perfil {
+    border-radius: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.user-name {
+    font-size: 0.9rem;
+    padding: 0 8px;
+}
+
+/* ------- WRAPER -------- */
+
+.wraper {
+    display: flex;
+    height: 78vh;
+    flex-grow: 1;
+}
+
+aside {
+    background-color: #ccc;
+    width: 10rem;
+    height: 100%;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.chat-users {
+    padding: 0;
+}
+
+.chat {
+    padding: 1.7rem;
+    border: 1px solid #0003;
+}
+.chat:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+main {
+    background: url('https://media.istockphoto.com/id/1403848173/es/vector/patr%C3%B3n-de-chat-en-l%C3%ADnea-vectorial-fondo-de-chat-en-l%C3%ADnea-sin-interrupciones.jpg?s=612x612&w=0&k=20&c=XUQwqGsD4vGUHZpeCgXxc0QSFIT32K2kE_XaVX77k6U=');
+    background-position: center;
+    width: 100%;
+}
+
+/* ------ FOOTER -------- */
+
+footer {
+    background-color: #133f;
+    color: #e9e9e9;
+    padding: 4rem;
+    text-align: center;
+}
