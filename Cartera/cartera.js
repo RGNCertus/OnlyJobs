@@ -1,4 +1,3 @@
-
 function abrirModal() {
   document.getElementById('modalCartera').style.display = 'block';
 }
