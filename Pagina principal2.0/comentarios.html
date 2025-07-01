@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comentarios y Calificaciones</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f0f2f5;
+      padding-top: 80px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background-color: #4267B2;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    .title {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      color: #333;
+      text-align: center;
+    }
+
+    .comentarios-grid {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 10px;
+    }
+
+    .comentario {
+      flex: 0 0 300px;
+      background-color: #e9f0ff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .comentario:hover {
+      transform: scale(1.03);
+    }
+
+    .comentario h4 {
+      margin-bottom: 10px;
+      color: #2b4e99;
+    }
+
+    .comentario p {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .ver-todos-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .btn-ver-todos, .btn-ver-mas {
+      background-color: #4267B2;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .btn-ver-todos:hover, .btn-ver-mas:hover {
+      background-color: #365899;
+    }
+
+    .formulario {
+      margin-top: 50px;
+    }
+
+    textarea, select, .formulario button {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .formulario button {
+      margin-bottom: 0;
+    }
+
+    .formulario-extra {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="WhatsApp Image 2025-06-04 at 9.39.06 AM.jpeg" class="logo" alt="Logo">
+  <span class="title">ONLYJOBS</span>
+</header>
+
+<div class="container">
+  <h2>Comentarios y Calificaciones</h2>
+  <div class="comentarios-grid">
+    <div class="comentario">
+      <h4>Excelente trabajo</h4>
+      <p>Muy profesional y cumplió con los plazos establecidos.</p>
+    </div>
+    <div class="comentario">
+      <h4>Gran diseño</h4>
+      <p>El logo que realizó superó nuestras expectativas. ¡Gracias!</p>
+    </div>
+    <div class="comentario">
+      <h4>Responsable y eficiente</h4>
+      <p>Se mantuvo en contacto constante y entregó un excelente resultado.</p>
+    </div>
+    <div class="comentario">
+      <h4>Buena experiencia</h4>
+      <p>Nos ayudó con el rediseño de nuestra app y quedamos muy satisfechos.</p>
+    </div>
+    <div class="comentario">
+      <h4>Trabajo impecable</h4>
+      <p>La animación que entregó fue de calidad profesional.</p>
+    </div>
+    <div class="comentario">
+      <h4>Gran solución</h4>
+      <p>Desarrolló un sistema de inventario muy funcional para nuestra tienda.</p>
+    </div>
+  </div>
+
+  <div class="ver-todos-container">
+    <a href="todos-los-comentarios.html" class="btn-ver-todos">Ver Todos los Comentarios</a>
+    <a href="#" class="btn-ver-mas">Ver Más</a>
+  </div>
+
+  <div class="formulario">
+    <h3>Deja tu comentario</h3>
+    <form>
+      <label for="comentario">Comentario:</label>
+      <textarea id="comentario" rows="4" placeholder="Escribe tu opinión..."></textarea>
+
+      <label for="calificacion">Calificación:</label>
+      <select id="calificacion">
+        <option value="5">⭐⭐⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="1">⭐</option>
+      </select>
+
+      <div class="formulario-extra">
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
+</html>

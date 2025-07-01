@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabajos Individuales</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f0f2f5;
+      padding-top: 80px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background-color: #4267B2;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    .title {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      color: #333;
+      text-align: center;
+    }
+
+    .trabajos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .trabajo {
+      flex: 1 1 calc(33% - 20px);
+      background-color: #e9f0ff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .trabajo:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .trabajo h4 {
+      margin-bottom: 10px;
+      color: #2b4e99;
+    }
+
+    .trabajo p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    .boton-comentarios {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .btn-ver-comentarios {
+      background-color: #4267B2;
+      color: white;
+      padding: 12px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-ver-comentarios:hover {
+      background-color: #365899;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="WhatsApp Image 2025-06-04 at 9.39.06 AM.jpeg" class="logo" alt="Logo">
+  <span class="title">ONLYJOBS</span>
+</header>
+
+<div class="container">
+  <h2>Trabajos Individuales</h2>
+  <div class="trabajos-grid">
+    <a href="comentarios1.html" class="trabajo">
+      <h4>Diseño de Logo Corporativo</h4>
+      <p>Creación de logotipo para una empresa de tecnología.</p>
+    </a>
+    <a href="comentarios2.html" class="trabajo">
+      <h4>Aplicación Web para Reservas</h4>
+      <p>Desarrollo de una aplicación para gestionar reservas de hoteles.</p>
+    </a>
+    <a href="comentarios3.html" class="trabajo">
+      <h4>Rediseño de Sitio Web</h4>
+      <p>Actualización completa del diseño para una tienda en línea.</p>
+    </a>
+    <a href="comentarios4.html" class="trabajo">
+      <h4>Desarrollo de App Móvil</h4>
+      <p>Creación de una app móvil para control de gastos personales.</p>
+    </a>
+    <a href="comentarios5.html" class="trabajo">
+      <h4>Animación Publicitaria</h4>
+      <p>Video animado promocional para una campaña de marketing.</p> 
+    </a>
+    <a href="comentarios6.html" class="trabajo">
+      <h4>Sistema de Inventario</h4>
+      <p>Desarrollo backend y frontend para el manejo de inventarios.</p>
+    </a>
+  </div>
+
+  <div class="boton-comentarios">
+    <a href="comentarios.html" class="btn-ver-comentarios">Ver Comentarios Generales</a>
+  </div>
+</div>
+
+</body>
+</html>
