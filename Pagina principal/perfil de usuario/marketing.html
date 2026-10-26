@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Categoría: Marketing Digital</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      padding-top: 80px;
+      color: #333;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 80px;
+      background-color: #4267B2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    .btn-trabajos {
+      background-color: white;
+      color: #4267B2;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-trabajos:hover {
+      background-color: #365899;
+      color: white;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 30px;
+      text-align: center;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      padding: 25px;
+      margin-bottom: 30px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #4267B2;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .btn-volver {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #4267B2;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-volver:hover {
+      background-color: #365899;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        font-size: 18px;
+        padding: 10px 20px;
+        gap: 10px;
+      }
+
+      .btn-trabajos {
+        align-self: flex-end;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <img src="logo1.png" alt="Logo ONLYJOBS" class="logo">
+      <span>ONLYJOBS - Categoría: Marketing Digital</span>
+    </div>
+    <a href="trabajos.html" class="btn-trabajos"><i class="fas fa-briefcase"></i> Trabajos Individuales</a>
+  </header>
+
+  <div class="container">
+    <h2>Servicios de Marketing Digital</h2>
+
+    <div class="card">
+      <h3><i class="fas fa-bullhorn"></i> Gestión de Redes Sociales</h3>
+      <p>Creación y planificación de contenido para Facebook, Instagram, TikTok, etc. Mejora de interacción y posicionamiento de marca.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-chart-line"></i> Campañas de Publicidad Digital (Ads)</h3>
+      <p>Configuración y optimización de campañas en Google Ads y Meta Ads para aumentar tráfico, ventas y conversiones.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-envelope"></i> Email Marketing</h3>
+      <p>Diseño y automatización de campañas por correo electrónico con segmentación y seguimiento de resultados.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-search-dollar"></i> SEO y Posicionamiento Web</h3>
+      <p>Auditoría SEO, optimización técnica, investigación de palabras clave y estrategias para mejorar el ranking en buscadores.</p>
+    </div>
+
+    <div class="card">
+      <h3><i class="fas fa-pen"></i> Copywriting Publicitario</h3>
+      <p>Redacción de textos persuasivos para sitios web, anuncios, correos y redes sociales con foco en la conversión.</p>
+    </div>
+
+    <a href="categorias.html" class="btn-volver"><i class="fas fa-arrow-left"></i> Volver a Categorías</a>
+  </div>
+
+</body>
+</html>
+

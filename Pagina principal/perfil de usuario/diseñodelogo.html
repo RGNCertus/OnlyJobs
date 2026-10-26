@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalles - Diseño de Logo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding-top: 80px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 80px;
+      background-color: #4267B2;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2, h3 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .btn-volver {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #4267B2;
+      color: white;
+      padding: 10px 20px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-volver:hover {
+      background-color: #365899;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
+        font-size: 18px;
+      }
+
+      .logo {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo1.png" class="logo" alt="Logo">
+    ONLYJOBS - Detalles del Proyecto
+  </header>
+
+  <div class="container">
+    <h2>Diseño de Logo Corporativo</h2>
+    <p>Este proyecto fue desarrollado para una empresa tecnológica en crecimiento que necesitaba definir su identidad visual. Se realizaron múltiples pruebas de color, tipografía y forma hasta llegar a un resultado moderno, limpio y versátil.</p>
+
+    <h3>Proceso Creativo</h3>
+    <p>Iniciamos con bocetos hechos a mano y referencias del sector. Luego pasamos al diseño digital con variantes cromáticas y estilos tipográficos. El resultado fue un logo adaptable a medios digitales e impresos.</p>
+
+    <div class="image-gallery">
+      <img src="https://images.unsplash.com/photo-1573496529574-be85d6a60704" alt="Bocetos del logo">
+      <img src="https://images.pexels.com/photos/3782121/pexels-photo-3782121.jpeg" alt="Tarjetas con logo">
+      <img src="https://images.pexels.com/photos/3782122/pexels-photo-3782122.jpeg" alt="Identidad visual mockup">
+    </div>
+
+    <h3>Aplicaciones del Logo</h3>
+    <p>El logo fue implementado en tarjetas de presentación, sitio web, correo corporativo, redes sociales y material de papelería.</p>
+
+    <h3>Resultado Final</h3>
+    <p>El cliente quedó satisfecho con el resultado, resaltando la claridad visual y profesionalismo del diseño. Esto le ayudó a mejorar su presencia de marca y atraer a más clientes potenciales.</p>
+
+    <a href="trabajos.html" class="btn-volver"><i class="fas fa-arrow-left"></i> Volver a Trabajos</a>
+  </div>
+
+</body>
+</html>
+
+
+

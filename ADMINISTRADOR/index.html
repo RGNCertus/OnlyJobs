@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Administrador</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylos.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="profile-pic">👤</div>
+    <div class="username">@user01100</div>
+    <div class="role">Administrador</div>
+  </div>
+
+  <div class="nav-buttons">
+    <button onclick="showSection('publicaciones')">Gestionar Publicaciones</button>
+    <button onclick="showSection('reportes')">Revisar Reportes</button>
+    <button onclick="showSection('comentarios')">Soporte al Cliente</button>
+    <button onclick="showSection('trabajos')">Editar/Eliminar Trabajos</button>
+  </div>
+
+  <div class="content-area">
+    <div id="publicaciones" class="section active">
+      <h2>📚 Gestionar Publicaciones</h2>
+      <ul>
+        <li>
+          Publicación A
+          <div class="actions">
+            <button class="btn" onclick="confirmarEliminacio('Publicación A')">Compartir</button>
+            <button class="btn" onclick="confirmarEliminacion('Publicación A')">Eliminar</button>
+          </div>
+        </li>
+        <li>
+          Publicación B
+          <div class="actions">
+            <button class="btn" onclick="confirmarEliminacio('Publicación B')">Compartir</button>
+            <button class="btn" onclick="confirmarEliminacion('Publicación B')">Eliminar</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div id="reportes" class="section">
+      <h2>🚨 Revisar Reportes</h2>
+      <button class="boton" onclick="window.location.href='Error440.html'">Abrir Reportes</button>
+      <ul>
+        <li>Reporte de @ana por contenido ofensivo.</li>
+        <li>Reporte de @mario por spam.</li>
+        
+      </ul>
+    </div>
+
+    <div id="comentarios" class="section">
+      <h2>💬 Soporte al Cliente</h2>
+      <div class="chat-box">
+      <span class="chat-user">@ana456:</span>
+      <span class="chat-admin">¿Cómo edito mi perfil?</span>
+      <span class="chat-user">Admin:</span>
+      <span class="chat-admin">Ve a la sección “Mi cuenta” y haz clic en “Editar perfil”.</span>
+    </div>
+    <div class="chat-box">
+      <span class="chat-user">@jose789:</span>
+      <span class="chat-admin">No puedo subir mi archivo.</span>
+      <span class="chat-user">Admin:</span>
+      <span class="chat-admin">Asegúrate que sea un PDF menor a 5MB.</span>
+    </div>
+  </div>
+
+    <div id="trabajos" class="section">
+      <h2>🛠️ Editar/Eliminar Trabajos</h2>
+      <ul>
+        <li>
+          Trabajo: “Diseño Web”
+          <div class="actions">
+            <button>Editar</button>
+            <button class="btn" onclick="confirmarEliminacion('“Diseño Web”')">Eliminar</button>
+          </div>
+        </li>
+        <li>
+          Trabajo: “Marketing Digital”
+          <div class="actions">
+            <button>Editar</button>
+            <button class="btn" onclick="confirmarEliminacion('“Marketing Digital”')">Eliminar</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div id="modal">
+    <div class="modal-content">
+      <p id="msg"></p>
+      <button class="confirm-btn" onclick="eliminarPublicacion()">Sí, eliminar</button>
+      <button class="cancel-btn" onclick="cerrarModa()">Cancelar</button>
+    </div>
+  </div>
+
+  <div id="Modal">
+    <div class="modal-content">
+      <p id="m"></p>
+
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://miweb.com/publicacion-a" target="_blank">
+  <img src="/OnlyJobs/ADMINISTRADOR/img/pngwing.com (5).png">
+</a>
+
+
+<a href="https://www.tiktok.com/@tucuenta/video/1234567890" target="_blank">
+  <img src="/OnlyJobs/ADMINISTRADOR/img/pngwing.com (3).png">
+</a>
+
+<a href="https://api.whatsapp.com/send?text=Mira%20esto:%20https://miweb.com/publicacion-a" target="_blank">
+  <img src="/OnlyJobs/ADMINISTRADOR/img/pngwing.com (2).png">
+</a>
+
+<a href="https://www.instagram.com/p/ABC123xyz/" target="_blank">
+  <img src="/OnlyJobs/ADMINISTRADOR/img/pngwing.com (4).png">
+</a>
+
+      <div class="ola">
+      <button class="cancel-bt" onclick="cerrarModal()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+  <script src="scrpit.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OnlyJobs - Inicio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="inicio.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <button id="admin-access-btn" onclick="window.location.href='/OnlyJobs/ADMINISTRADOR/index.html'"></button>
+  
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <h1>OnlyJobs</h1>
+    </div>
+    <nav>
+      <a href="/OnlyJobs/Sobre Nosotros/SobreNosotros.html"><i class="fas fa-info-circle"></i> Sobre Nosotros</a>
+      <a href="/OnlyJobs/Redes Sociales/RedesSociales.html"><i class="fas fa-hashtag"></i> Redes Sociales</a>
+      <a href="/OnlyJobs/Contactanos/Contacto.html"><i class="fas fa-envelope"></i> Contáctanos</a>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <section class="hero-section">
+      <div class="carousel-section">
+        <div class="carousel">
+          <button class="prev"><i class="fas fa-chevron-left"></i></button>
+          <img src="carrusel1.jpg" alt="Carrusel" class="carousel-image" id="carousel-img" />
+          <button class="next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="hero-text">
+          <h2 class="slogan">¡Obtén trabajo de manera rápida!</h2>
+          <p class="sub-slogan">Conectamos talento estudiantil con oportunidades reales</p>
+          <a href="/OnlyJobs/Registrarse/registro.html">
+          <button class="cta-button">Explora trabajos</button>
+          </a>
+        </div>
+      </div>
+
+      <section class="login-section">
+        <div class="login-card">
+          <img src="logo.png" alt="Logo" class="side-logo" />
+          <form id="login-form">
+            <h2>Iniciar Sesión</h2>
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="text" id="username" placeholder="Usuario" required />
+            </div>
+            <div class="input-group">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="password" placeholder="Contraseña" required />
+            </div>
+            <button type="button" id="login-btn">Ingresar</button>
+            <div class="divider">ó</div>
+            <button type="button" class="google-btn" onclick="window.location.href='/OnlyJobs/Google/login.html'">
+              <img src="https://www.gstatic.com/images/branding/googleg/1x/googleg_standard_color_32dp.png" alt="Google Logo">
+              <span>Inicia con Google</span>
+            </button>
+            <a href="/OnlyJobs/Registrarse/registro.html" class="register-link">Regístrate aquí</a>
+          </form>
+          <a href="/OnlyJobs/Terminos/terminos.html" class="terms">Términos y Condiciones</a>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 OnlyJobs. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="inicio.js"></script>
+</body>
+</html>

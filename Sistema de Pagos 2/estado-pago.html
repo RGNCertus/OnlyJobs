@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OnlyJobs - Estado de Pagos</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+  <style>
+    .estado {
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      display: inline-block;
+      margin-top: 0.3rem;
+    }
+
+    .estado.pendiente {
+      background-color: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+    }
+
+    .estado.completado {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    .estado.cancelado {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    .estado-compras {
+      font-size: 0.9rem;
+      color: #444;
+      text-align: right;
+    }
+    .filtro-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0 1rem 1rem;
+    font-family: 'Rubik', sans-serif;
+  }
+
+  #filtro-estado {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  .carrito-producto-imagen {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <aside id="aside-menu">
+      <header class="aside-header">
+        <a class="nav-link" href="#">
+          <img src="./logo.png" alt="Logo" class="logo-img" />
+          <h1 class="logo">OnlyJobs</h1>
+        </a>
+      </header>
+      <div class="user-greeting">
+        <h2 class="bienvenido">Bienvenido</h2>
+        <p class="user-email">juan.perez@email.com</p>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li>
+              <a class="boton-menu boton-volver" href="/OnlyJobs/Pagina principal/main.html">
+                <i class="bi bi-arrow-return-left"></i> Seguir comprando
+              </a>
+          </li>
+          <li><a class="boton-menu" href="./index.html"><i class="bi bi-cart-fill"></i> Carrito</a></li>
+          <li><a class="boton-menu" href="./metododepago.html"><i class="bi bi-credit-card"></i> Métodos de pago</a></li>
+          <li><a class="boton-menu" href="./historial.html"><i class="bi bi-clock-history"></i> Historial</a></li>
+          <li><a class="boton-menu active" href="./estado-pago.html"><i class="bi bi-clipboard2-check"></i> Estados de pago</a></li>
+        </ul>
+      </nav>
+      <footer class="aside-footer">
+        <a href="../index.html" class="boton-menu boton-logout"><i class="bi bi-box-arrow-left"></i> Cerrar sesión</a>
+        <p class="texto-footer">© 2025 OnlyJobs</p>
+      </footer>
+    </aside>
+
+    <!-- Main -->
+    <main>
+      <div class="carrito-header">
+        <h2 class="titulo-principal">
+          <i class="bi bi-clipboard2-check"></i> Estado de Compras
+        </h2>
+      </div>
+      <div class="filtro-contenedor">
+  <label for="filtro-estado">Filtrar por estado:</label>
+  <select id="filtro-estado">
+    <option value="todos">Todos</option>
+    <option value="pendiente">Pendiente</option>
+    <option value="completado">Completado</option>
+    <option value="cancelado">Cancelado</option>
+  </select>
+</div>
+
+
+      <div class="carrito-productos">
+
+  <!-- Ejemplo: Pendiente -->
+  <div class="carrito-producto estado-card pendiente">
+    <img class="carrito-producto-imagen" src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&w=400&q=80" alt="Programador Junior">
+    <div class="carrito-producto-info">
+      <h3 class="carrito-producto-titulo">Programador Junior</h3>
+      <p class="carrito-producto-categoria">Categoría: Software</p>
+      <p class="carrito-producto-descripcion">Desarrollo de funcionalidades básicas, soporte técnico, trabajo remoto.</p>
+      <p class="carrito-producto-precio">Costo: S/. 1500.00</p>
+    </div>
+    <div class="carrito-producto-subtotal estado-compras">
+      Estado: <span class="estado pendiente">Pendiente</span><br>
+      Código: PJ-2025-001<br>
+      Fecha: 01/07/2025
+    </div>
+  </div>
+
+  <!-- Ejemplo: Completado -->
+  <div class="carrito-producto estado-card completado">
+    <img class="carrito-producto-imagen" src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=400&q=80" alt="Diseñador Frontend">
+    <div class="carrito-producto-info">
+      <h3 class="carrito-producto-titulo">Diseñador Frontend</h3>
+      <p class="carrito-producto-categoria">Categoría: Diseño Web</p>
+      <p class="carrito-producto-descripcion">Maquetación HTML/CSS, diseño responsivo y animaciones interactivas.</p>
+      <p class="carrito-producto-precio">Costo: S/. 750.00</p>
+    </div>
+    <div class="carrito-producto-subtotal estado-compras">
+      Estado: <span class="estado completado">Completado</span><br>
+      Código: DF-2025-002<br>
+      Fecha: 03/07/2025
+    </div>
+  </div>
+
+  <!-- Ejemplo: Cancelado -->
+  <div class="carrito-producto estado-card cancelado">
+    <img class="carrito-producto-imagen" src="https://i.ytimg.com/vi/yi8oIYSKnTc/hqdefault.jpg" alt="Tester QA">
+    <div class="carrito-producto-info">
+      <h3 class="carrito-producto-titulo">Tester QA</h3>
+      <p class="carrito-producto-categoria">Categoría: QA</p>
+      <p class="carrito-producto-descripcion">Validación de software, pruebas funcionales, documentación de bugs.</p>
+      <p class="carrito-producto-precio">Costo: S/. 950.00</p>
+    </div>
+    <div class="carrito-producto-subtotal estado-compras">
+      Estado: <span class="estado cancelado">Cancelado</span><br>
+      Código: QA-2025-003<br>
+      Fecha: 05/07/2025
+    </div>
+  </div>
+
+</div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="./java/menu.js"></script>
+  <script>
+  const filtro = document.getElementById("filtro-estado");
+  const tarjetas = document.querySelectorAll(".estado-card");
+
+  filtro.addEventListener("change", () => {
+    const valor = filtro.value;
+
+    tarjetas.forEach((tarjeta) => {
+      if (valor === "todos" || tarjeta.classList.contains(valor)) {
+        tarjeta.style.display = "flex";
+      } else {
+        tarjeta.style.display = "none";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

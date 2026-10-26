@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inicio - Categorías</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #f0f2f5, #dbe3f0);
+      padding-top: 80px;
+      color: #1c1e21;
+      min-height: 100vh;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background-color: #4267B2;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    .title {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .main {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      text-align: center;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .category-button {
+      background: white;
+      color: #4267B2;
+      padding: 25px;
+      text-align: center;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .category-button i {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #365899;
+    }
+
+    .category-button:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .bottom-buttons {
+      margin: 50px auto 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .bottom-buttons a {
+      background-color: #4267B2;
+      color: white;
+      text-decoration: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.2s;
+    }
+
+    .bottom-buttons a:hover {
+      background-color: #365899;
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 20px;
+      }
+
+      .category-button {
+        font-size: 16px;
+        padding: 20px;
+      }
+
+      .category-button i {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo1.png" class="logo" alt="Logo">
+    <span class="title">ONLYJOBS - Categorías</span>
+  </header>
+
+  <div class="main">
+    <h2>Explorar Categorías</h2>
+
+    <div class="button-grid">
+      <a href="diseño.html" class="category-button"><i class="fas fa-paint-brush"></i>Diseño</a>
+      <a href="desarrollodesofware.html" class="category-button"><i class="fas fa-code"></i>Desarrollo de Software</a>
+      <a href="marketing.html" class="category-button"><i class="fas fa-bullhorn"></i>Marketing Digital</a>
+      <a href="redaccion.html" class="category-button"><i class="fas fa-language"></i>Redacción y Traducción</a>
+      <a href="audioyvideo.html" class="category-button"><i class="fas fa-microphone-alt"></i>Audio y Video</a>
+      <a href="soporte.html" class="category-button"><i class="fas fa-headset"></i>Soporte Técnico</a>
+    </div>
+
+    <div class="bottom-buttons">
+      <a href="perfil.html"><i class="fas fa-arrow-left"></i> Atrás</a>
+      <a href="trabajos.html">Ver Trabajos</a>
+    </div>
+  </div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estadísticas del Perfil</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f0f2f5;
+      padding-top: 80px;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background-color: #4267B2;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    .title {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .chart-box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    .chart-placeholder {
+      height: 300px;
+      background-color: #dfe6f3;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .chart-placeholder img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .filters {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .filters label {
+      margin-right: 10px;
+    }
+
+    select, input[type="date"] {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .nav-buttons button {
+      background-color: #4267B2;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #365899;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .lightbox-close:hover {
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo1.png" class="logo" alt="Logo">
+  <span class="title">ONLYJOBS</span>
+</header>
+
+<div class="container">
+  <h2>Estadísticas del Perfil</h2>
+
+  <div class="filters">
+    <div>
+      <label for="desde">Desde:</label>
+      <input type="date" id="desde">
+      <label for="hasta">Hasta:</label>
+      <input type="date" id="hasta">
+    </div>
+    <div>
+      <label for="tipo">Tipo:</label>
+      <select id="tipo">
+        <option value="todo">Todos</option>
+        <option value="comentarios">Comentarios</option>
+        <option value="calificaciones">Calificaciones</option>
+        <option value="proyectos">Proyectos</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- GRAFICO CON AMPLIACIÓN -->
+  <div class="chart-box">
+    <h3>Calificaciones Recibidas</h3>
+    <a href="#img1">
+      <div class="chart-placeholder">
+        <img src="imagen1.1png.png" alt="Gráfico de barras - Calificaciones">
+      </div>
+    </a>
+  </div>
+
+  <div class="chart-box">
+    <h3>Proyectos Finalizados por Mes</h3>
+    <a href="#img2">
+    <div class="chart-placeholder">
+     <img src="imagen2.png" alt="Gráfico de lineas - proyectos">
+     </div>
+     </a>
+  </div>
+
+  
+
+  <div class="chart-box">
+    <h3>Distribución de Comentarios</h3>
+    <a href="#img3">
+    <div class="chart-placeholder">
+     <img src="imagen3.png" alt="Gráfico de pastel - Distribución ">
+     </div>
+     </a>
+  </div>
+
+  <a href="perfil.html">
+    <div class="nav-buttons">
+      <button>&larr; Anterior</button>
+    </div>
+  </a>
+</div>
+
+<!-- LIGHTBOX FULLSCREEN -->
+<div id="img1" class="lightbox">
+  <a href="#" class="lightbox-close">&times;</a>
+  <img src="imagen1.1png.png" alt="Gráfico en grande">
+</div>
+<div id="img2" class="lightbox">
+  <a href="#" class="lightbox-close">&times;</a>
+  <img src="imagen2.png" alt="Gráfico en grande">
+</div>
+<div id="img3" class="lightbox">
+  <a href="#" class="lightbox-close">&times;</a>
+  <img src="imagen3.png" alt="Gráfico en grande">
+</div>
+
+</body>
+</html>

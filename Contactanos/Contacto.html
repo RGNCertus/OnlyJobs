@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contáctanos - OnlyJobs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="contacto.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <div class="contact-container">
+    <div class="contact-header">
+      <a href="/OnlyJobs/index.html" class="logo-link">
+        <img src="logo.png" alt="Logo OnlyJobs" class="logo">
+      </a>
+      <div class="header-text">
+        <h1>Contáctanos</h1>
+        <p class="subtitle">¿Tienes alguna duda o problema? ¡Déjanos ayudarte!</p>
+      </div>
+    </div>
+
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="info-card">
+          <i class="fas fa-envelope"></i>
+          <h3>Correo Electrónico</h3>
+          <p>contacto@onlyjobs.com</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-phone-alt"></i>
+          <h3>Teléfono</h3>
+          <p>+51 123 456 789</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Oficinas</h3>
+          <p>Certus, 123<br>Sede San Juan de Lurigancho</p>
+        </div>
+      </div>
+
+      <form id="contactForm" class="contact-form">
+        <div class="form-row">
+          <div class="input-group">
+            <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+
+          <div class="input-group">
+            <label for="apellido"><i class="fas fa-user"></i> Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="correo"><i class="fas fa-envelope"></i> Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+
+        <div class="input-group">
+          <label for="problema"><i class="fas fa-question-circle"></i> Describe tu problema:</label>
+          <textarea id="problema" name="problema" rows="5" required></textarea>
+        </div>
+
+        <div class="input-group">
+          <label for="hora"><i class="fas fa-clock"></i> Hora de preferencia para atención:</label>
+          <input type="time" id="hora" name="hora">
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <span>Enviar Mensaje</span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="contacto.js"></script>
+</body>
+</html>

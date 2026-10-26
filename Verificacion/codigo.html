@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyJobs - Generar Código</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --clr-main: #0074d9;
+            --clr-main-light: #5c90d4;
+            --clr-white: #ffffff;
+            --clr-gray: #f5f7fb;
+            --clr-text: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--clr-gray);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: radial-gradient(circle at 90% 20%, rgba(64, 130, 216, 0.1) 0%, rgba(255, 255, 255, 0.1) 90%);
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            height: 40px;
+            width: auto;
+        }
+
+        .code-card {
+            background: var(--clr-white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .code-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--clr-main), var(--clr-main-light));
+        }
+
+        h1 {
+            color: var(--clr-main);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .code-display {
+            font-size: 3rem;
+            letter-spacing: 10px;
+            color: var(--clr-main);
+            margin: 2rem 0;
+            font-weight: bold;
+            background: #f0f5ff;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px dashed var(--clr-main-light);
+            user-select: all;
+        }
+
+        .action-btn {
+            background: linear-gradient(135deg, var(--clr-main), var(--clr-main-light));
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px 5px;
+            box-shadow: 0 4px 15px rgba(64, 130, 216, 0.3);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(64, 130, 216, 0.4);
+        }
+
+        .copy-btn {
+            background: #f0f5ff;
+            color: var(--clr-main);
+            border: 2px solid var(--clr-main-light);
+        }
+
+        .back-btn {
+            background: #f0f5ff;
+            color: var(--clr-main);
+            border: 2px solid var(--clr-main-light);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <a href="/OnlyJobs/index.html" class="logo-container">
+        <img src="../logo.png" alt="OnlyJobs Logo">
+    </a>
+
+    <div class="code-card fade-in">
+        <h1><i class="fas fa-key"></i> Tu Código de Verificación</h1>
+        <p>Por favor copia este código y regresa a la pantalla de verificación:</p>
+        
+        <div class="code-display" id="codeDisplay">123456</div>
+        
+        <button class="action-btn" id="copyBtn">
+            <i class="far fa-copy"></i> Copiar Código
+        </button>
+        <button class="action-btn back-btn" onclick="window.location.href='verificacion.html'">
+            <i class="fas fa-arrow-left"></i> Volver a Verificación
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+        function generateRandomCode() {
+            return Math.floor(100000 + Math.random() * 900000).toString();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const code = generateRandomCode();
+            localStorage.setItem('verificationCode', code);
+            codeDisplay.textContent = code;
+
+            document.getElementById('copyBtn').addEventListener('click', function() {
+                navigator.clipboard.writeText(code).then(() => {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Código copiado!',
+                        text: 'El código ha sido copiado al portapapeles',
+                        confirmButtonColor: '#4082d8',
+                        timer: 1500
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

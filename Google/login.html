@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyJobs - Iniciar con Google</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="google-auth-container">
+        <div class="google-auth-header">
+            <img
+                src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                alt="Google Logo"
+                class="google-logo"
+            >
+            <h1>Iniciar sesión con Google</h1>
+            <p>Para continuar en OnlyJobs</p>
+        </div>
+
+        <div class="accounts-list">
+            <button type="button" class="account-option" id="googleSignInBtn">
+                <div class="account-avatar">
+                    <i class="fa-brands fa-google"></i>
+                </div>
+                <div class="account-info">
+                    <div class="account-name">Continuar con Google</div>
+                    <div class="account-email">Selecciona tu cuenta de Google</div>
+                </div>
+            </button>
+        </div>
+
+        <div class="loading-container" id="loadingContainer" style="display: none;">
+            <div class="loading-spinner"></div>
+            <p>Iniciando sesión...</p>
+        </div>
+
+        <p id="errorMessage" role="alert" style="display: none; color: #c62828;"></p>
+
+        <div class="google-auth-footer">
+            <a href="#" class="footer-link">@OnlyJobs 2026</a>
+        </div>
+    </div>
+
+    <script type="module" src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyJobs - Historial</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header-mobile">
+            <a class="nav-link" href="#">
+                <img src="./logo.png" alt="Logo" class="logo-img" />
+                <h1 class="logo">OnlyJobs</h1>
+            </a>
+            <button class="open-menu" id="open-menu">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="carrito-mobile">
+                <i class="bi bi-cart-fill"></i>
+                <span class="numerito" id="numerito-mobile">0</span>
+            </div>
+        </header>
+        
+        <aside id="aside-menu">
+            <header class="aside-header">
+                <a class="nav-link" href="#">
+                    <img src="./logo.png" alt="Logo" class="logo-img" />
+                    <h1 class="logo">OnlyJobs</h1>
+                </a>
+            </header>
+            
+            <div class="user-greeting">
+                <h2 class="bienvenido">Bienvenido</h2>
+                <p class="user-email">juan.perez@email.com</p>
+            </div>
+            
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a class="boton-menu boton-volver" href="/OnlyJobs/Pagina principal/main.html">
+                            <i class="bi bi-arrow-return-left"></i> Seguir comprando
+                        </a>
+                    </li>
+                    <li>
+                        <a class="boton-menu" href="./index.html">
+                            <i class="bi bi-cart-fill"></i> Carrito 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="boton-menu" href="./metododepago.html">
+                            <i class="bi bi-credit-card"></i> Métodos de pago
+                        </a>
+                    </li>
+                    <li>
+                        <a class="boton-menu boton-carrito active" href="./historial.html">
+                            <i class="bi bi-clock-history"></i> Historial 
+                        </a>
+                    </li>
+                    <li>
+                        <a class="boton-menu" href="./estado-pago.html">
+                            <i class="bi bi-clipboard2-check"></i> Estados de pago
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <footer class="aside-footer">
+                <a href="../index.html" class="boton-menu boton-logout">
+                    <i class="bi bi-box-arrow-left"></i> Cerrar sesión
+                </a>
+                <p class="texto-footer">© 2025 OnlyJobs</p>
+            </footer>
+        </aside>
+        
+        <main>
+    <div class="carrito-header">
+        <h2 class="titulo-principal">
+            <i class="bi bi-clock-history"></i> Historial de trabajos contratados
+        </h2>
+    </div>
+
+    <div id="carrito-productos" class="carrito-productos">
+    <!-- Trabajo 1 -->
+    <div class="carrito-producto">
+        <img class="carrito-producto-imagen" src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Programador Junior">
+        <div class="carrito-producto-info">
+            <h3 class="carrito-producto-titulo">Programador Junior</h3>
+            <p class="carrito-producto-categoria">Categoría: Software</p>
+            <p class="carrito-producto-descripcion">Dominio en lenguajes de desarrollo, solucionador de problemas, conocimiento de JavaScript, Python, Java, C++.</p>
+            <p class="carrito-producto-precio">Costo: S/. 1500.00</p>
+        </div>
+        <div class="carrito-producto-subtotal">Fecha: 29/06/2025</div>
+        <div>
+            <button class="boton-primario ver-boleta" data-id="1" data-trabajo="Programador Junior" data-precio="1500.00" data-fecha="29/06/2025" data-categoria="Software">Ver boleta</button>
+            <button class="boton-secundario ver-perfil">Ver Perfil</button>
+        </div>
+    </div>
+
+    <!-- Trabajo 2 -->
+    <div class="carrito-producto">
+        <img class="carrito-producto-imagen" src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=400&q=80" alt="Diseñador Frontend">
+        <div class="carrito-producto-info">
+            <h3 class="carrito-producto-titulo">Diseñador Frontend</h3>
+            <p class="carrito-producto-categoria">Categoría: Diseño Web</p>
+            <p class="carrito-producto-descripcion">Implementación de interfaces, optimización, animaciones y mantenimientos para páginas web.</p>
+            <p class="carrito-producto-precio">Costo: S/. 750.00</p>
+        </div>
+        <div class="carrito-producto-subtotal">Fecha: 30/06/2025</div>
+        <div>
+            <button class="boton-primario ver-boleta" data-id="2" data-trabajo="Diseñador Frontend" data-precio="750.00" data-fecha="30/06/2025" data-categoria="Diseño Web" >Ver boleta</button>
+            <button class="boton-secundario ver-perfil">Ver Perfil</button>
+        </div>
+    </div>
+
+    <!-- Trabajo 3 -->
+    <div class="carrito-producto">
+        <img class="carrito-producto-imagen" src="https://i.ytimg.com/vi/yi8oIYSKnTc/hqdefault.jpg" alt="Tester de Software Junior">
+        <div class="carrito-producto-info">
+            <h3 class="carrito-producto-titulo">Tester de Software Junior</h3>
+            <p class="carrito-producto-categoria">Categoría: QA / Pruebas</p>
+            <p class="carrito-producto-descripcion">Ejecución de pruebas funcionales, reporte de errores y validación de flujo lógico en aplicaciones web.</p>
+            <p class="carrito-producto-precio">Costo: S/. 950.00</p>
+        </div>
+        <div class="carrito-producto-subtotal">Fecha: 02/07/2025</div>
+        <div>
+            <button class="boton-primario ver-boleta" data-id="3" data-trabajo="Tester de Software Junior" data-precio="950.00" data-fecha="02/07/2025" data-categoria="QA / Pruebas">Ver boleta</button>
+            <button class="boton-secundario ver-perfil">Ver Perfil</button>
+        </div>
+    </div>
+
+    <!-- Trabajo 4 -->
+    <div class="carrito-producto">
+        <img class="carrito-producto-imagen" src="https://isil.pe/blog/wp-content/uploads/2024/03/perfil-desarrollador-back-end.webp" alt="Desarrollador Backend Junior">
+        <div class="carrito-producto-info">
+            <h3 class="carrito-producto-titulo">Desarrollador Backend Junior</h3>
+            <p class="carrito-producto-categoria">Categoría: Desarrollo Web</p>
+            <p class="carrito-producto-descripcion">Conocimientos en Node.js, PHP o Java, manejo de bases de datos y estructuras API RESTful.</p>
+            <p class="carrito-producto-precio">Costo: S/. 1200.00</p>
+        </div>
+        <div class="carrito-producto-subtotal">Fecha: 04/07/2025</div>
+        <div>
+            <button class="boton-primario ver-boleta" data-id="4" data-trabajo="Desarrollador Backend Junior"data-precio="1200.00" data-fecha="04/07/2025" data-categoria="Desarrollo Web" >Ver boleta</button>
+            <button class="boton-secundario ver-perfil">Ver Perfil</button>
+        </div>
+    </div>
+ </div>
+ 
+ <div class="popup" id="popup-boleta">
+  <div class="popup-content" id="popup-content">
+    <h2>Boleta de Trabajo</h2>
+    <p><strong>Trabajo:</strong> <span id="boleta-trabajo"></span></p>
+    <p><strong>Precio:</strong> S/. <span id="boleta-precio"></span></p>
+    <p><strong>Fecha:</strong> <span id="boleta-fecha"></span></p>
+    <p><strong>ID Transacción:</strong> <span id="boleta-id"></span></p>
+    <button class="close-popup" id="close-popup">Cerrar</button>
+  </div>
+</div>
+
+
+</main>
+    </div>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./java/menu.js"></script>
+    <script src="./java/historial.js"></script>
+
+
+<style>
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .popup-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    font-family: 'Rubik', sans-serif;
+    animation: slideUp 0.3s ease;
+  }
+
+  .popup-content h2 {
+    margin-top: 0;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .popup-content p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  .popup-content span {
+    font-weight: 600;
+    color: #000;
+  }
+
+  .close-popup {
+    margin-top: 1.5rem;
+    background-color: #0000CD;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-weight: 600;
+  }
+
+  .close-popup:hover {
+    background-color: #00009c;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+</style>
+    
+</body>
+</html>

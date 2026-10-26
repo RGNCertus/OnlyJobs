@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OnlyJobs - Registro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="registro.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="register-container">
+    <div class="register-card">
+      <a href="/OnlyJobs/index.html" class="logo-link">
+        <img src="logo.png" alt="Logo OnlyJobs" class="logo"/>
+      </a>
+      
+      <div class="register-header">
+        <h2>Crear tu cuenta</h2>
+        <p>Únete a OnlyJobs y encuentra oportunidades estudiantiles</p>
+      </div>
+      
+      <form id="registroForm" class="register-form">
+        <div class="form-group dual-inputs">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="nombre" placeholder="Nombre" required />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="apellido" placeholder="Apellido" required />
+          </div>
+        </div>
+        
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="correo" placeholder="Correo electrónico" required />
+        </div>
+        
+        <div class="input-group">
+          <i class="fas fa-user-tag"></i>
+          <input type="text" id="usuario" placeholder="Nombre de usuario" required />
+        </div>
+        
+        <div class="form-group dual-inputs">
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="contrasena" placeholder="Contraseña" required />
+            <i class="fas fa-eye toggle-password" data-target="contrasena"></i>
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="confirmarContrasena" placeholder="Confirmar contraseña" required />
+            <i class="fas fa-eye toggle-password" data-target="confirmarContrasena"></i>
+          </div>
+        </div>
+        
+        <button type="submit" class="register-btn">
+          <span>Registrarse</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        
+        <div class="divider">
+          <span>o</span>
+        </div>
+        
+        <button type="button" class="google-btn" onclick="window.location.href='/OnlyJobs/Google/login.html'">
+          <img src="https://www.gstatic.com/images/branding/googleg/1x/googleg_standard_color_32dp.png" alt="Google Logo">
+          <span>Regístrate con Google</span>
+        </button>
+      </form>
+      
+      <p class="login-link">¿Ya tienes una cuenta? <a href="/OnlyJobs/index.html">Inicia sesión</a></p>
+    </div>
+    
+    <div class="register-hero">
+      <div class="hero-content">
+        <h3>Beneficios de registrarte</h3>
+        <ul class="benefits-list">
+          <li><i class="fas fa-check-circle"></i> Acceso a trabajos exclusivos para estudiantes</li>
+          <li><i class="fas fa-check-circle"></i> Perfil personalizable</li>
+          <li><i class="fas fa-check-circle"></i> Sistema de valoraciones</li>
+          <li><i class="fas fa-check-circle"></i> Notificaciones de nuevos empleos</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="registro.js"></script>
+</body>
+</html>
