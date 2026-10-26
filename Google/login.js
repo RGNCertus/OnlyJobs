@@ -7,7 +7,7 @@ import {
 
 // Configuración de tu proyecto Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyAvr6UmxKKsVVHotuaQ-7XSikfXSnW_Mw",
+    apiKey: "AIzaSyAvr6UmxKKsVVHotuaQ-7XSikfXSnW_Mwc",
     authDomain: "onlyjobs-96cca.firebaseapp.com",
     projectId: "onlyjobs-96cca",
     storageBucket: "onlyjobs-96cca.firebasestorage.app",
